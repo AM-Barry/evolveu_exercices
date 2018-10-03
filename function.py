@@ -1,4 +1,6 @@
 
+#My amazing program does nice stuffs
+
 # practicing functions/TDD
 
 #function add two numbers
