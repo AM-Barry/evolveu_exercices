@@ -43,11 +43,11 @@ def add_contents(numlist):
 		total+=i
 	return total
 
-# def lookup(dict,num):
-# 	for num in dict.keys():
-# 		print(dict.values())
+def lookup(dict,num):
+	for num in dict.keys():
+		print(dict.values())
 		
-# 		# return (dict.values())+" mine"
+		# return (dict.values())+" mine"
 
 
 
