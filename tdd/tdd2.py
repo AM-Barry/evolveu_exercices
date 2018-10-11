@@ -5,18 +5,22 @@ def add_five(a):
 	return a + 5
 
 def my_max(num):
-	max= num[0]
-	for i in num:
-		if i > max:
-   			max=i
-	return max
+	if len(num) != 0:
+		max= num[0]
+		for i in num:
+			if i > max:
+   				max=i
+		return max
+	return None
 
 def my_min(num):
-	min= num[0]
-	for i in num:
-		if i < min:
-			min=i
-	return min
+	if len(num) != 0:
+		min= num[0]
+		for i in num:
+			if i < min:
+				min=i
+		return min
+	return None
 
 def has_string(strlist, strings):
 	hasString = []
@@ -27,11 +31,16 @@ def has_string(strlist, strings):
 def to_date(dt):
     return datetime.strptime(dt, "%Y-%m-%d").date()
 
-def date_diff(date1, date2):
-	a = int(date1[9])
-	b = int(date2[9])
-	c = (a-b)
-	return c
+def date_diff(dt1, dt2):
+	d1 = datetime.strptime(dt1, "%Y-%m-%d").date()
+	d2 = datetime.strptime(dt2, "%Y-%m-%d").date()
+	if d1 > d2 :
+		delta = d1 - d2
+		return delta.days
+	else :
+		delta = d2 - d1
+		return delta.days
+	return delta.days
 
 def mayan_days( dt, mdt):
 	d0 = datetime.strptime(dt, "%Y-%m-%d").date()
@@ -50,8 +59,8 @@ def add_contents(numlist):
 	return total
 
 def lookup(dictio,num):
-	strreturned = ''
-	for i in dictio.keys():
-		if dictio[i] == dictio[num]:
-			strreturned = dictio[i]
-	return strreturned+' mine'		
+	if len(dictio) != 0:
+		if num in dictio:
+			return dictio[num] + ' mine'
+		return ' mine'
+	return 'Empty dictionary'

@@ -1,0 +1,7 @@
+[
+  "test_t_logic.py::TestLogic::test_expo",
+  "test_t_logic.py::TestLogic::test_flo",
+  "test_t_logic.py::TestLogic::test_largest_num",
+  "test_t_logic.py::TestLogic::test_mod",
+  "test_t_logic.py::TestLogic::test_test_dummy_tests"
+]
