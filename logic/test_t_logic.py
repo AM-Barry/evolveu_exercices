@@ -22,9 +22,7 @@ class TestLogic(unittest.TestCase):
 
 	def test_test_dummy_tests(self):
 		#self.assertEqual(0,0,0,0,0,0,0, t_logic.dummy_tests(2,2))
-		t_logic.dummy_tests()
-
-	def test_mod(self):
+			def test_mod(self):
 		self.assertEqual(2, t_logic.mod(4,2))
 
 	def test_flo(self):
@@ -41,3 +39,4 @@ class TestLogic(unittest.TestCase):
 
 # Lookup the “range” statement: returns sequence of 
 # numbers between the start integer and the stop one
+

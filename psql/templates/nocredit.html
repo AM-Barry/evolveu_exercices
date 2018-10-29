@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>SQL_Join</title>
+</head>
+<body>
+    <a href="{{url_for('home')}}">go back</a>
+    <h1> Clients no credits</h1>
+    {% for client in nocredits%}
+    <ul>
+        {{client[0]}}
+        {{client[1]}}
+        {{client[2]}}
+    </ul>
+    {% endfor %}
+    
+    
+</body>
+    
+</html>

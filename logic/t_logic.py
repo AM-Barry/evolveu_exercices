@@ -44,11 +44,129 @@ def largest_num(a, b, c):
 		return c
 
 # function to return list of numbers
-# def retour_num(a, b):
-# 	if a > b :
-# 		for n in range(a, b):
+# using while loop
+def retour_num(a, b):
+	resul = []
+	i = 1
+	if a<b:
+		r = range(a,b)
+		while i < len(r):
+			resul.append(r[i])
+			i+=1
+		return resul
+	elif a == b:
+		return 'you entered same numbers'
+	else:
+		r = range(b,a)
+		while i < len(r):
+			resul.append(r[i])
+			i+=1
+		return resul
 
-	
+#using for loop
+def retour_num(a, b):
+	resul = []
+	i = 1
+	if a<b:
+		r = range(a,b)
+		for i in range(i,len(r)):
+			resul.append(r[i])
+			i+=1
+		return resul
+	elif a == b:
+		return 'you entered same numbers'
+	else:
+		r = range(b,a)
+		for i in range(i,len(r)):
+			resul.append(r[i])
+			i+=1
+		return resul
+
+#odd numbers function
+def odd_number(a, b):
+	resul = []
+	i = 1
+	if a<b:
+		r = range(a,b)
+		for i in range(i,len(r)):
+			if r[i] % 2 != 0:
+				resul.append(r[i])
+				i+=1
+		return resul
+	elif a == b:
+		return 'you entered same numbers'
+	else:
+		r = range(b,a)
+		for i in range(i,len(r)):
+			if r[i] % 2 != 0:
+				resul.append(r[i])
+				i+=1
+		return resul
+
+#even numbers function
+def even_number(a, b):
+	resul = []
+	i = 1
+	if a<b:
+		r = range(a,b)
+		for i in range(i,len(r)):
+			if r[i] % 2 == 0:
+				resul.append(r[i])
+				i+=1
+		return resul
+	elif a == b:
+		return 'you entered same numbers'
+	else:
+		r = range(b,a)
+		for i in range(i,len(r)):
+			if r[i] % 2 == 0:
+				resul.append(r[i])
+				i+=1
+		return resul
+
+# List the 6 comparison operators python has:
+# <, >, <=, >=, ==, !=
+
+#Write a single function that shows how to use the 6 comparison operators. 
+def comp_operators(a, b):
+	if a < b:
+		print(b ,'greater than', a)
+	elif a > b:
+		print(a ,'greater than', b)
+	elif a == b:
+		print(a ,'equal', b)
+	elif a != b:
+		print(a ,'diffrent to', b)
+	elif a <= b:
+		print(a ,'less than or greater than', b)
+	else:
+		print(b ,'less than or greater than', a)
+
+#largest number of a list function
+def content_list(mylist):
+	return mylist
+
+def largest_list(mylist):
+	max = 0
+	if len(mylist) != 0:
+		for i in mylist:
+			if i > max:
+				max = i
+		return max
+	else:
+		return 'empty list'
+
+#longest character from a list function
+def longest_charac(mylist):
+	count=0
+	if len(mylist) != 0:
+		for i in mylist:
+			if len(i) > count:
+				count = len(i)
+				word = i
+		return ('the logest string is: ' + word)
+	else:
+		return'empty list'
 
 
 
