@@ -6,10 +6,10 @@
 </head>
 <body>
     <a href="{{url_for('home')}}">go back</a>
-    <h1> Clients by Id</h1>
-    {% for client in clientslist%}
+    <h1> Clients class object</h1>
+    {% for client in clients%}
     <ul>
-        {{client[0]}}
+        {{client.name}} {{client.credit}}  {{client.date}}
     </ul>
     {% endfor %}
     

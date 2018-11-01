@@ -4,6 +4,15 @@ import psycopg2
 
 database = 'evolveu'
 
+#class functions 
+def get_client_tuple(conn):
+    cur = conn.cursor()
+    clients = []
+    cur.execute("SELECT name, credits, month from clients c join credits d on c.client_id= d.client_id")
+    for name, credits, month in cur.fetchall() :
+        clients.append([name, credits, month])
+    return clients
+
 # All clients function:
 def get_all_clients( conn ) :
     cur = conn.cursor()

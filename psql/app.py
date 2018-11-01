@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import join
+from joinclass import Client
 from join import database
 import psycopg2
  
@@ -11,12 +12,24 @@ app = Flask(__name__)
 def home():
    return render_template("home.html")
 
+@app.route("/class")
+def classformat():
+    myConnection = psycopg2.connect(dbname=database )
+    clients = join.get_client_tuple(myConnection)
+    myConnection.close()
+    myarray = []
+    for client in clients:
+        myarray.append(Client(client[0], client[1], client[2]))
+    return render_template("class.html",clients = myarray)
+
+
 @app.route("/clients")
 def allclients():
-	myConnection = psycopg2.connect(dbname=database )
-	clients = join.get_all_clients( myConnection )
-	myConnection.close()
-	return render_template("clients.html", clientslist=clients)
+    myConnection = psycopg2.connect(dbname=database )
+    clients = join.get_all_clients( myConnection )
+    print(clients)
+    myConnection.close()
+    return render_template("clients.html", clientslist=clients)
 
 @app.route("/months")
 def month_July():
