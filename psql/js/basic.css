@@ -1,0 +1,47 @@
+p {
+    text-align: center;
+    
+}
+
+.top {
+    
+    height: 150px;
+    border: 1px solid #000000;
+    background-color: #14d440
+}
+
+.left {
+    float: left;
+    width: 50%;
+    min-height: 200px;
+    background-color: #505f5f;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.bottom {
+   clear: both;
+    
+    height: 150px;
+    background-color: #0a23ac;
+    border: 1px solid #000000;
+   }
+.movebottom {
+    
+    margin-top: 10px;
+    
+}
+
+
+
+
+textarea {
+    width: 95%;
+    height: 60%;
+    display: block;
+    margin-left: 2.5%;
+    margin-right: 20px;
+    margin-bottom: 10%;
+}
+
+

@@ -1,0 +1,49 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="basic.css">
+        
+        <h1>Hello World</h1>
+    
+    </head>
+
+    <body>
+        
+        <div class="top">
+            <p>Top</p>
+            <div class="toptext">
+                <textarea id="textarea" name="message" >[1,2,3,4,5,6,7,8,9]</textarea>
+            </div>
+            
+        </div> 
+        <div class="left">
+            <p>Left</p>
+            <p class="arraylist" id="listarray"></p>
+        </div> 
+        
+        <div class="left">
+            <p>Right</p>
+            <p class="objectlist" id="listobject"></p>
+            
+        </div>  
+        
+        <div class="bottom">
+            <p>Bottom</p>
+            <p class="jsonlist" id="listjson"></p>
+            <p class="move" id="movebottom"></p>
+        </div> 
+        
+        <button onclick="moveText()" class="movebottom" type="button">Move</button>
+        <button onclick="playModule" id="json" type="button">Json</button>
+        <button onclick="myArray" id="myArray" type="button">Array</button>
+        <button onclick="myObject" id="myObject" type="button">Object</button>
+        <button onclick="mydivBuilder" id="mydivBuilder" type="button">Div builder</button><br/>
+        
+        <div id="main"></div>
+        
+        <script src="basic.js"></script>
+        
+    </body>
+
+
+</html>
